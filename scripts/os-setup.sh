@@ -36,6 +36,7 @@ sudo apt install gparted # Visualize drives/partitions
 sudo apt install silversearcher-ag # Better grep
 sudo apt install autojump # Better grep
 sudo apt install lua5.3
+sudo apt install xclip # copy/pasta clipboard
 
 
 ###################################################################
