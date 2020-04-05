@@ -1,0 +1,24 @@
+alias reload="exec $SHELL -l"
+
+# apt
+alias a="sudo apt"
+alias as="sudo apt search"
+alias ai="sudo apt install"
+alias aiy="sudo apt install --assume-yes"
+alias ar="sudo apt remove"
+alias sa="sudo apt"
+alias sas="sudo apt search"
+alias sai="sudo apt install"
+alias saiy="sudo apt install --assume-yes"
+alias sar="sudo apt remove"
+
+# tig
+alias t="tig status"
+
+# keyboard
+alias keyboard-disable="xinput float 18"
+alias keyboard-enable="xinput reattach 18 3"
+
+# emacs
+alias emacs-term="emacs -nw"
+alias vime="emacs-term"

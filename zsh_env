@@ -1,0 +1,13 @@
+# zsh-history-substring-search configuration
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
+
+# fasd
+# eval "$(fasd --init auto)"
+
+# colorls - https://github.com/athityakumar/colorls
+# source $(dirname $(gem which colorls))/tab_complete.sh
+
+# Always list after cd
+# cd() { builtin cd "$@"; colorls -A --sort-dirs; }
