@@ -49,6 +49,7 @@ sudo apt install lua5.3
 sudo apt install xclip # copy/pasta clipboard
 sudo apt install pop-desktop # for multi-de switching at login
 sudo apt install ranger
+sudo apt install lightdm # alternative to `gdm3` display manager
 
 
 ###################################################################
@@ -68,10 +69,13 @@ rcup -v
 ###################################################################
 ### i3 ############################################################
 ###################################################################
+# Problem: Black screen in i3 for PopOs
+#   https://www.reddit.com/r/i3wm/comments/95gri4/black_screen_functional_i3_under_pop_os_with/
 sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf xutils-dev libtool automake
 sudo add-apt-repository -y ppa:kgilmer/speed-ricer
 sudo apt install i3-gaps
 sudo apt install polybar
+
 
 ###################################################################
 ### Node / NPM / Yarn  ############################################

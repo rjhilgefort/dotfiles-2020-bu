@@ -13,7 +13,11 @@ alias saiy="sudo apt install --assume-yes"
 alias sar="sudo apt remove"
 
 # display manager
-alias display-manager-restart="sudo systemctl restart gdm"
+# https://askubuntu.com/questions/829108/what-is-gdm3-kdm-lightdm-how-to-install-and-remove-them
+# lightdm, gdm, gdm3
+alias display-manager-list="cat /etc/X11/default-display-manager"
+alias display-manager-configure="sudo dpkg-reconfigure lightdm" # prompts UI, so doesn't matter which you pick here
+alias display-manager-restart='sudo systemctl restart lightdm'
 
 # tig
 alias t="tig status"
