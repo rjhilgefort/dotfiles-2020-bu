@@ -12,13 +12,42 @@ alias sai="sudo apt install"
 alias saiy="sudo apt install --assume-yes"
 alias sar="sudo apt remove"
 
+# display manager
+alias display-manager-restart="sudo systemctl restart gdm"
+
 # tig
 alias t="tig status"
 
-# keyboard
-alias keyboard-disable="xinput float 18"
-alias keyboard-enable="xinput reattach 18 3"
+### keyboard disablers
+# https://askubuntu.com/questions/160945/is-there-a-way-to-disable-a-laptops-internal-keyboard
+# Use `xinput list` to find the internal keyboard
+# TODO: Can't figure out how to use variables in `rg`
+KBD-INTERNAL="AT Translated Set 2 keyboard"
+kbd-internal-disable () {
+  xinput list | rg -o "AT Translated Set 2 keyboard\s*id=([0-9]*)\s" -r '$1' | xargs -I{} xinput float {}
+}
+kbd-internal-enable () {
+  xinput list | rg -o "AT Translated Set 2 keyboard\s*id=([0-9]*)\s" -r '$1' | xargs -I{} xinput reattach {} 3
+}
+alias kbd-disable="kbd-internal-disable"
+alias kbd-enable="kbd-internal-enable"
 
 # emacs
 alias emacs-term="emacs -nw"
+alias emacs-bg="emacs &"
+alias em="emacs-term"
 alias vime="emacs-term"
+
+# see what apps are currently using the network
+alias appsoninternet='sudo lsof -P -i -n | cut -f 1 -d " " | uniq'
+
+# list what ports are currently open
+alias listopenports='sudo lsof -i -P | grep -i "listen"'
+
+# dns
+flush-dns() {
+  sudo killall -HUP mDNSResponder
+  sudo killall mDNSResponderHelper
+  sudo dscacheutil -flushcache
+}
+

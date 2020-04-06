@@ -22,6 +22,15 @@ sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 
+###################################################################
+### ZSH  ##########################################################
+###################################################################
+sudo apt install zsh
+chsh -s $(which zsh)
+curl -L git.io/antigen > ~/bin/antigen.zsh
+echo "YOU NEED TO LOG OUT AND LOG BACK IN"
+
+
 ######################################################################################
 ### CLI Package Installs #############################################################
 ######################################################################################
@@ -34,18 +43,12 @@ sudo apt install neofetch # Fancy OS terminal output
 sudo apt install tig # Git GUI
 sudo apt install gparted # Visualize drives/partitions
 sudo apt install silversearcher-ag # Better grep
+sudo apt install ripgrep # Saner defaults than ag
 sudo apt install autojump # Better grep
 sudo apt install lua5.3
 sudo apt install xclip # copy/pasta clipboard
-
-
-###################################################################
-### ZSH  ##########################################################
-###################################################################
-sudo apt install zsh
-chsh -s $(which zsh)
-curl -L git.io/antigen > ~/bin/antigen.zsh
-echo "YOU NEED TO LOG OUT AND LOG BACK IN"
+sudo apt install pop-desktop # for multi-de switching at login
+sudo apt install ranger
 
 
 ###################################################################
@@ -63,6 +66,14 @@ rcup -v
 
 
 ###################################################################
+### i3 ############################################################
+###################################################################
+sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf xutils-dev libtool automake
+sudo add-apt-repository -y ppa:kgilmer/speed-ricer
+sudo apt install i3-gaps
+sudo apt install polybar
+
+###################################################################
 ### Node / NPM / Yarn  ############################################
 ###################################################################
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
@@ -78,7 +89,7 @@ curl -sLf https://spacevim.org/install.sh | bash
 ### Lutris ########################################################
 ###################################################################
 sudo apt install lutris
-sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo add-apt-repository -y ppa:graphics-drivers/ppa
 sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt install nvidia-driver-430 libnvidia-gl-430 libnvidia-gl-430:i386
