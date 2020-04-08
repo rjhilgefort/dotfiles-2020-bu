@@ -50,6 +50,10 @@ sudo apt install xclip # copy/pasta clipboard
 sudo apt install pop-desktop # for multi-de switching at login
 sudo apt install ranger
 sudo apt install lightdm # alternative to `gdm3` display manager
+sudo apt install kitty # terminal
+sudo apt install xcape # remap kbd keys at the os level
+sudo apt install gnome-tweak-tool # GUI for messing with system settings
+sudo apt install playerctl # control media keys
 
 
 ###################################################################
@@ -108,7 +112,7 @@ sudo apt install discord
 sudo apt install steam
 sudo apt install google-chrome-stable
 sudo apt install slack-desktop
-flatpak install flathub com.spotify.Client
+sudo apt install spotify-client
 # Battle.net
 # Hearthtone
 # Magic Aren
