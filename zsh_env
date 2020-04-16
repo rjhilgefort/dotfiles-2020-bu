@@ -14,3 +14,9 @@ HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# Path updates
+# TODO: path+=($HOME + '/.scripts')
+path+=('/home/rjhilgefort/.scripts')
+path+=('/home/rjhilgefort/.bin')
+export PATH

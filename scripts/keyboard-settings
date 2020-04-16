@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+echo "General keyboard settings"
+xset r rate 150 50
+
+echo "Remap super-to-control"
+remap-super-to-ctrl
+
+echo "Detecting external keyboard..."
+PLANK_OUTPUT=lsusb -v 2>/dev/null | rg "OLKB Planck"
+if [[ PLANK_OUTPUT ]]; then
+  kbd-internal-disable
+else
+  kbd-internal-enable
+fi

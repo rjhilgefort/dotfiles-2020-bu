@@ -54,7 +54,14 @@ sudo apt install kitty # terminal
 sudo apt install xcape # remap kbd keys at the os level
 sudo apt install gnome-tweak-tool # GUI for messing with system settings
 sudo apt install playerctl # control media keys
+sudo apt install blueman # bluetooth manager
+sudo apt install compton # window transparency and what not
+sudo apt install feh # backgrounds for i3
+sudo apt install pcmanfm # file explorer
+sudo apt install rofi # alfred!
+sudo apt install dolphin # file manager
 
+sudo add-apt-repository ppa:daniel-marynicz/filemanager-actions
 
 ###################################################################
 ### Dotfiles / RCM ################################################
@@ -63,8 +70,8 @@ sudo apt install playerctl # control media keys
 ### lsrc, mkrc, rcdn, rcup
 ###################################################################
 sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
-sudo apt-get update
-sudo apt-get install rcm
+sudo apt update
+sudo apt install rcm
 # TODO: git clone my shiz to ~/.dotfiles
 lsrc # dry run, scope out what's going to happen
 rcup -v
@@ -82,6 +89,16 @@ sudo apt install polybar
 
 
 ###################################################################
+### albert ########################################################
+###################################################################
+# https://github.com/albertlauncher/albert
+# https://software.opensuse.org/download.html?project=home:manuelschneid3r&package=albert
+cd ~/bin
+wget https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_19.10/amd64/albert_0.16.1_amd64.deb
+sudo apt install ./albert_0.16.1_amd64.deb
+
+
+###################################################################
 ### Node / NPM / Yarn  ############################################
 ###################################################################
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
@@ -91,6 +108,22 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ### SpaceVim ######################################################
 ###################################################################
 curl -sLf https://spacevim.org/install.sh | bash
+
+
+###################################################################
+### Nativefier ####################################################
+###################################################################
+# https://github.com/jiahaog/nativefier
+# Install nativefier
+npm install nativefier -g
+mkdir -p ~/Apps
+cd ~/Apps
+# Todoist
+nativefier --name "todoist" "https://todoist.com/app"
+sudo ln -s /home/$(whoami)/Apps/todoist-linux-x64/todoist /usr/local/bin/todoist
+# Notion
+nativefier --name "notion" "https://www.notion.so/"
+sudo ln -s /home/$(whoami)/Apps/notion-linux-x64/notion /usr/local/bin/notion
 
 
 ###################################################################
@@ -134,8 +167,10 @@ sudo ./install.sh
 
 
 ##################################################################
-### Special Install: Magic Mouse #################################
+### Special Install: Trackpad #################################
 ##################################################################
+# https://github.com/RicardoEPRodrigues/Linux-Magic-Trackpad-2-Driver
+# https://github.com/p2rkw/xf86-input-mtrack
 
 
 ##################################################################

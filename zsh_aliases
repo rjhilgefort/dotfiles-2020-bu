@@ -23,16 +23,6 @@ alias display-manager-restart='sudo systemctl restart lightdm'
 alias t="tig status"
 
 ### keyboard disablers
-# https://askubuntu.com/questions/160945/is-there-a-way-to-disable-a-laptops-internal-keyboard
-# Use `xinput list` to find the internal keyboard
-# TODO: Can't figure out how to use variables in `rg`
-KBD-INTERNAL="AT Translated Set 2 keyboard"
-kbd-internal-disable () {
-  xinput list | rg -o "AT Translated Set 2 keyboard\s*id=([0-9]*)\s" -r '$1' | xargs -I{} xinput float {}
-}
-kbd-internal-enable () {
-  xinput list | rg -o "AT Translated Set 2 keyboard\s*id=([0-9]*)\s" -r '$1' | xargs -I{} xinput reattach {} 3
-}
 alias kbd-disable="kbd-internal-disable"
 alias kbd-enable="kbd-internal-enable"
 

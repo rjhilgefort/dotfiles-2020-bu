@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+echo "Setting Internal trackpad settings"
+xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
+xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Disable While Typing Enabled" 0
+xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Accel Speed" 0.25
+
+echo "Setting 'Rob Hilgefort's Mouse' settings"
+xinput --set-prop "Rob Hilgefort’s Mouse" "libinput Natural Scrolling Enabled" 1
+xinput --set-prop "Rob Hilgefort’s Mouse" "libinput Accel Speed" -0.647000
+xinput --set-prop "Rob Hilgefort’s Mouse" "libinput Accel Profile Enabled" 0, 1

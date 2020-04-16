@@ -39,7 +39,7 @@ antigen theme denysdovhan/spaceship-prompt # NOTE: A little slow to paint the gi
 antigen apply
 
 # Load broken out config files
-[[ -s "$HOME/.zsh_aliases" ]] && source "$HOME/.zsh_aliases"
 [[ -s "$HOME/.zsh_env" ]] && source "$HOME/.zsh_env"
 [[ -s "$HOME/.zsh_secrets" ]] && source "$HOME/.zsh_secrets"
+[[ -s "$HOME/.zsh_aliases" ]] && source "$HOME/.zsh_aliases"
 
