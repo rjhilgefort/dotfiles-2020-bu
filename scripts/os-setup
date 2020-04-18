@@ -1,4 +1,4 @@
-!#/bin/zsh
+#!/bin/zsh
 
 sudo mkdir -p /temp
 sudo mkdir -p ~/bin
@@ -59,7 +59,10 @@ sudo apt install compton # window transparency and what not
 sudo apt install feh # backgrounds for i3
 sudo apt install pcmanfm # file explorer
 sudo apt install rofi # alfred!
-sudo apt install dolphin # file manager
+sudo apt install gnome-dictionary
+sudo apt install zeal
+sudo apt install mpd
+sudo apt install sonata
 
 sudo add-apt-repository ppa:daniel-marynicz/filemanager-actions
 
@@ -95,6 +98,15 @@ sudo apt install polybar
 # https://software.opensuse.org/download.html?project=home:manuelschneid3r&package=albert
 cd ~/bin
 wget https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_19.10/amd64/albert_0.16.1_amd64.deb
+sudo apt install ./code_1.44.1-1586789296_amd64.deb
+
+
+###################################################################
+### VSCode ########################################################
+###################################################################
+# https://code.visualstudio.com/docs/setup/linux
+cd ~/bin
+wget https://go.microsoft.com/fwlink/?LinkID=760868
 sudo apt install ./albert_0.16.1_amd64.deb
 
 
