@@ -62,7 +62,8 @@ sudo apt install rofi # alfred!
 sudo apt install gnome-dictionary
 sudo apt install zeal
 sudo apt install mpd
-sudo apt install sonata
+sudo apt install sonata # ??
+sudo apt install jq # json parse, I think
 
 sudo add-apt-repository ppa:daniel-marynicz/filemanager-actions
 
