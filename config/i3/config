@@ -25,30 +25,23 @@ set $mod Mod1
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 8
 
+
 ### Media Keys: Volume
 ### Pulse Audio controls
 ########################
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-# increase sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-# decrease sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-# mute sound
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-# mute mic
-# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% # increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% # decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status # mute mic
 
 
 ### Sreen brightness controls
 #############################
-# increase screen brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
-# decrease screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
 
 ### Media player controls
 #########################
@@ -58,11 +51,15 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 
+# Touchpad controls
+# https://faq.i3wm.org/question/3747/enabling-multimedia-keys/?answer=3759#post-id-3759
+# bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+
+
 ### i3 gaps config
 ##################
 gaps inner 10
-gaps outer 10
-
+gaps outer 5
 # this script has it's own gap settings- TODO dry it up
 bindsym $mod+w exec ~/.scripts/i3-toggle-gaps toggle
 
@@ -102,8 +99,6 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -114,8 +109,6 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -131,8 +124,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+q layout stacking
-bindsym $mod+r layout tabbed
+bindsym $mod+r layout stacking
+# bindsym $mod+r layout tabbed
 bindsym $mod+t layout toggle split
 
 # toggle tiling / floating
@@ -262,5 +255,5 @@ exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/System76-Unleash_Your_Ro
 
 
 ### Peripherals Settings
-exec_always --no-startup-id ~/.scripts/mouse-settings &
-exec_always --no-startup-id ~/.scripts/keyboard-settings &
+exec_always ~/.scripts/mouse-settings
+exec_always ~/.scripts/keyboard-settings
