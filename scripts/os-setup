@@ -64,6 +64,7 @@ sudo apt install zeal
 sudo apt install mpd
 sudo apt install sonata # ??
 sudo apt install jq # json parse, I think
+sudo apt install arandr # monitor management 
 
 sudo add-apt-repository ppa:daniel-marynicz/filemanager-actions
 
@@ -197,3 +198,9 @@ sudo ./install.sh
 # Useful for if you're setting a mech keyboard on top of internal
 gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing false
 
+
+################################################################
+# Fonts
+################################################################
+# MacOS Fonts
+# https://securitronlinux.com/debian-testing/install-mac-osx-fonts-on-linux-easily/

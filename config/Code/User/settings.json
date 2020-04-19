@@ -998,7 +998,7 @@
             "before": [
                 "<leader>",
                 "w",
-                "-"
+                "s"
             ],
             "after": [],
             "commands": [
@@ -1012,7 +1012,7 @@
             "before": [
                 "<leader>",
                 "w",
-                "/"
+                "v"
             ],
             "after": [],
             "commands": [
@@ -1218,5 +1218,9 @@
     ],
     "vim.easymotion": true,
     "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
-    "workbench.iconTheme": "eq-material-theme-icons-palenight"
+    "workbench.iconTheme": "eq-material-theme-icons-palenight",
+    "files.associations": {
+        "config": "i3"
+    },
+    "editor.minimap.enabled": false
 }
