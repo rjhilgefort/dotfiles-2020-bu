@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+notify-send "kbd-internal-disable"
+
 # https://askubuntu.com/questions/160945/is-there-a-way-to-disable-a-laptops-internal-keyboard
 # Use `xinput list` to find the internal keyboard
 

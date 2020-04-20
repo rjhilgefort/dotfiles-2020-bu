@@ -65,6 +65,7 @@ sudo apt install mpd
 sudo apt install sonata # ??
 sudo apt install jq # json parse, I think
 sudo apt install arandr # monitor management 
+sudo apt install libnotify-bin # send notifications
 
 sudo add-apt-repository ppa:daniel-marynicz/filemanager-actions
 
