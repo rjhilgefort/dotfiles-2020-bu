@@ -1220,7 +1220,11 @@
     "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons-palenight",
     "files.associations": {
-        "config": "i3"
+        "config": "i3",
+        "zsh_aliases": "shellscript",
+        ".crontab": "shellscript",
+        "zshrc": "shellscript",
+        "zsh_functions": "shellscript"
     },
     "editor.minimap.enabled": false
 }

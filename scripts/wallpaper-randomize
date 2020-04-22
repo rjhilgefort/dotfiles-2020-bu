@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# TODO: I don't know what this does
+export DISPLAY=:0.0
+
+# feh random
+feh --bg-max --randomize /home/rjhilgefort/Pictures/wallpaper 
+
+# betterlockscreen
+# This is nice because my lock screen will change with it, little heavier
+# TODO: Doesn't seem to work
+# betterlockscreen -u /home/rjhilgefort/Pictures/wallpaper
+# betterlockscreen -w

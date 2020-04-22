@@ -200,9 +200,11 @@ bindsym $mod+Shift+n move container to workspace next; workspace next
 # bindsym $mod+x move workspace to output right
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+z reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+# lock i3
+bindsym $mod+Shift+c exec ~/.scripts/i3-lock
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
@@ -248,9 +250,6 @@ bar {
 # Startup CLI Apps
 ##################################################################
 exec XDG_CURRENT_DESKTOP=GNOME
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet # blueman-manager
 exec --no-startup-id compton
@@ -259,7 +258,14 @@ exec --no-startup-id albert
 # exec --no-startup-id rofi
 # exec --no-startup-id rescuetime
 # exec --no-startup-id ~/.config/polybar/launch.sh &
-exec_always feh --bg-fill ~/Pictures/wallpaper/System76-Unleash_Your_Robot_Blue-by_Kate_Hazen_of_System76.png
+exec_always --no-startup-id ~/.scripts/wallpaper-randomize
+
+### Lock settings
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+# TODO: need both?
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.scripts/i3-lock
+exec --no-startup-id xautolock -time 5 -locker "~/.scripts/i3-lock"
 
 ### Peripherals Settings
 exec_always ~/.scripts/mouse-settings

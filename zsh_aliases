@@ -38,10 +38,3 @@ alias appsoninternet='sudo lsof -P -i -n | cut -f 1 -d " " | uniq'
 # list what ports are currently open
 alias listopenports='sudo lsof -i -P | grep -i "listen"'
 
-# dns
-flush-dns() {
-  sudo killall -HUP mDNSResponder
-  sudo killall mDNSResponderHelper
-  sudo dscacheutil -flushcache
-}
-

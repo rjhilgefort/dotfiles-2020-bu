@@ -41,5 +41,6 @@ antigen apply
 # Load broken out config files
 [[ -s "$HOME/.zsh_env" ]] && source "$HOME/.zsh_env"
 [[ -s "$HOME/.zsh_secrets" ]] && source "$HOME/.zsh_secrets"
+[[ -s "$HOME/.zsh_functions" ]] && source "$HOME/.zsh_functions"
 [[ -s "$HOME/.zsh_aliases" ]] && source "$HOME/.zsh_aliases"
 
