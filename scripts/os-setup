@@ -34,6 +34,9 @@ echo "YOU NEED TO LOG OUT AND LOG BACK IN"
 ######################################################################################
 ### CLI Package Installs #############################################################
 ######################################################################################
+sudo add-apt-repository ppa:daniel-marynicz/filemanager-actions
+sudo add-apt-repository ppa:nilarimogard/webupd8
+
 sudo apt install curl
 sudo apt install file
 sudo apt install git
@@ -66,8 +69,7 @@ sudo apt install sonata # ??
 sudo apt install jq # json parse, I think
 sudo apt install arandr # monitor management 
 sudo apt install libnotify-bin # send notifications
-
-sudo add-apt-repository ppa:daniel-marynicz/filemanager-actions
+sudo apt install woeusb # ISO bootable drive maker
 
 ###################################################################
 ### Dotfiles / RCM ################################################
