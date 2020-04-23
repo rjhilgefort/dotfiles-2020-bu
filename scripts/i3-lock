@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Normal i3lock
+# i3lock
 # i3lock -i ~/Pictures/wallpaper/System76-Robot-by_Kate_Hazen_of_System76.png
 
 # https://github.com/meskarune/i3lock-fancy
@@ -8,3 +9,4 @@
 
 # https://github.com/pavanjadhaw/betterlockscreen
 betterlockscreen --lock
+# betterlockscreen --lock blur
