@@ -147,6 +147,4 @@ function providers() {
 	providers();
 })();
 
-settings.blacklist = {
-  "https://mail.google.com": 1
-}
+unmapAllExcept([], /\/mail.google.com\//);
