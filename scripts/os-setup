@@ -135,6 +135,11 @@ cd ~/install
 wget https://zoom.us/client/latest/zoom_amd64.deb
 sudo apt install ./zoom_amd64.deb
 
+### Stacer ########################################################
+cd ~/install
+wget https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/stacer_1.1.0_amd64.deb
+sudo apt install ./stacer_1.1.0_amd64.deb
+
 ### Toggl ########################################################
 cd ~/install
 echo "You need to use the link to download toggl. TODO"
