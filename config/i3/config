@@ -282,9 +282,11 @@ assign [class="Google-chrome"] $ws2
 # WS3
 assign [class="discord"] $ws3
 assign [class="Slack"] $ws3
+assign [class="yakyak"] $ws3
 # WS4
 assign [class="todoist-nativefier-6c11dd"] $ws4
 assign [class="notion-nativefier-46aee8"] $ws4
+assign [class="Toggl Desktop"] $ws4
 # WS5
 assign [class="Spotify"] $ws5
 for_window [class="Spotify"] move to workspace $ws5
@@ -307,11 +309,13 @@ exec google-chrome
 # WS3
 exec discord
 exec slack
+exec yakyak
 # WS4
 # TODO: Gmail
 # TODO: Calendar
 exec todoist
 exec notion
+exec TogglDesktop
 # WS5
 exec spotify
 # WS7

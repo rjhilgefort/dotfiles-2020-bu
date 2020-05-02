@@ -108,9 +108,7 @@ cd ~/bin
 wget -O betterlockscreen https://git.io/fASUJ
 chmod u+x betterlockscreen
 
-###################################################################
 ### albert ########################################################
-###################################################################
 # https://github.com/albertlauncher/albert
 # https://software.opensuse.org/download.html?project=home:manuelschneid3r&package=albert
 cd ~/install
@@ -119,33 +117,35 @@ sudo apt install ./code_1.44.1-1586789296_amd64.deb
 
 
 ###################################################################
-### VSCode ########################################################
+### Random Installs ###############################################
 ###################################################################
+
+### copyq #########################################################
+sudo add-apt-repository ppa:hluk/copyq
+sudo apt install copyq
+
+### VSCode ########################################################
 # https://code.visualstudio.com/docs/setup/linux
 cd ~/install
 wget https://go.microsoft.com/fwlink/?LinkID=760868
 sudo apt install ./albert_0.16.1_amd64.deb
 
-
-###################################################################
-### VSCode ########################################################
-###################################################################
+### Zoom ########################################################
 cd ~/install
 wget https://zoom.us/client/latest/zoom_amd64.deb
 sudo apt install ./zoom_amd64.deb
 
+### Toggl ########################################################
+cd ~/install
+echo "You need to use the link to download toggl. TODO"
+# wget https://toggl.github.io/toggldesktop/download/linux_deb64-stable/
+# sudo apt install ./toggldesktop_7.4.528_amd64.deb
 
-###################################################################
 ### Node / NPM / Yarn  ############################################
-###################################################################
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
-
-###################################################################
 ### SpaceVim ######################################################
-###################################################################
 curl -sLf https://spacevim.org/install.sh | bash
-
 
 ###################################################################
 ### Nativefier ####################################################
@@ -195,6 +195,7 @@ sudo apt install spotify-client
 ### GUI Snap Install ##########################################
 ###################################################################
 sudo snap install yakyak
+sudo snap install todoist-thibaut
 
 
 #########################################################################

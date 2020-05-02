@@ -1224,7 +1224,8 @@
         "zsh_aliases": "shellscript",
         ".crontab": "shellscript",
         "zshrc": "shellscript",
-        "zsh_functions": "shellscript"
+        "zsh_functions": "shellscript",
+        "zsh_env": "shellscript"
     },
     "editor.minimap.enabled": false
 }

@@ -1,5 +1,14 @@
+#!/bin/zsh
+
 # https://github.com/alols/xcape#examples
-spare_modifier="Hyper_L"
-xmodmap -e "keycode 133 = $spare_modifier"
-xmodmap -e "remove mod4 = $spare_modifier" # hyper_l is mod4 by default
-xmodmap -e "add mod4 = $spare_modifier"
+# http://xahlee.info/linux/linux_swap_control_and_alt_xmodmap.html
+
+Hyper="Hyper_L" # mod4, 133
+Control="Control_L" # control, 37
+
+xmodmap -e "clear control"
+xmodmap -e "clear mod4"
+xmodmap -e "keycode 37 = Control_L"
+xmodmap -e "keycode 133 = Hyper_L Super_L"
+xmodmap -e "add control = Control_L Control_R"
+xmodmap -e "add mod4 = Hyper_L Super_L"
