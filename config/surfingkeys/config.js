@@ -146,3 +146,5 @@ function providers() {
 	unmappings();
 	providers();
 })();
+
+unmapAllExcept([], /\/mail.google.com\//);
