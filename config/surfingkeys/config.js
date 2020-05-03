@@ -76,6 +76,18 @@ function mappings() {
   );
   alias("u", "X", true);
   alias("<A-Tab>", "gt");
+  // TODO: move tabs more easily with "<Ctrl+{>"
+  // alias("<Ctrl-{>", "E", true);
+  // mapp("<Ctrl-Shift-[>", "#7 test 1", () => alert("<Ctrl-Shift-[>"));
+  // mapp("{", "#7 test 1", () => {
+  //   alert("<Ctrl-{>");
+  // });
+  // mapp("{", "#7 test 1", () => {
+  //   alert("<Ctrl-{>");
+  // });
+  // mapp("<Shift+[>", "#7 test 1", () => {
+  //   alert("<Ctrl-{>");
+  // });
 
   mapp("p", "#7 Paste URL in current tab", () => {
     Clipboard.read(({ data }) => (window.location.href = data));
@@ -83,7 +95,9 @@ function mappings() {
   mapp("P", "#7 Paste URL in new tab", () => {
     Clipboard.read(({ data }) => tabOpenLink(data));
   });
-  mapp("<Ctrl-p>", "#7 Unpin tab", () => RUNTIME("togglePinTab"));
+  mapp("<Ctrl-p>", "#2 Unpin tab", () => {
+    RUNTIME("togglePinTab");
+  });
 
   // SCROLLING
   ////////////////////////////////////////////////////////
@@ -162,11 +176,11 @@ function mappings() {
   alias(modes.Insert, "<Ctrl-l>", "<Alt-f>");
 }
 
-const unmappings = () => {
-  unmapp(["<Ctrl-i>", "B", "ab"]);
+function unmappings() {
+  // unmapp(["<Ctrl-i>", "B", "ab"]);
   // disable emojis
-  unmapp(modes.Insert, ":");
-};
+  // unmapp(modes.Insert, ":");
+}
 
 function providers() {
   addProvider("T", "twitch", "https://twitch.tv");
@@ -174,12 +188,10 @@ function providers() {
   addProvider("w", "wikipedia", "https://en.wikipedia.org/w/index.php?search=");
 }
 
-(function () {
-  init();
-  doSettings();
-  mappings();
-  unmappings();
-  providers();
-})();
+init();
+doSettings();
+mappings();
+// unmappings();
+providers();
 
 unmapAllExcept([], /\/mail.google.com\//);

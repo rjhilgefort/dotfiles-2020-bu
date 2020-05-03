@@ -212,8 +212,9 @@ sudo apt install spotify-client
 ### GUI Snap Install ##########################################
 ###################################################################
 sudo snap install yakyak
-sudo snap install todoist-thibaut
 sudo snap install cheat 
+sudo snap install --edge android-messages-desktop
+# sudo snap install todoist-thibaut
 
 
 #########################################################################
