@@ -201,6 +201,7 @@ sudo apt install spotify-client
 ###################################################################
 sudo snap install yakyak
 sudo snap install todoist-thibaut
+sudo snap install cheat 
 
 
 #########################################################################
