@@ -1,3 +1,8 @@
+/**
+ * Default config
+ * https://github.com/brookhong/Surfingkeys/blob/d96246d3a37abead7899d2b197b7f0dbe050cc95/pages/default.js#L258
+ */
+
 const modes = {};
 
 function addMode(mode, mapFn, mapkeyFn, unmapFn) {
@@ -51,14 +56,18 @@ function init() {
 }
 
 function doSettings() {
-  Hints.characters = "aoeusnthidkbpg";
+  Hints.characters = "asdfghjkl;";
   chrome.storage.local.set({ noPdfViewer: 1 });
   settings.caseSensitive = true;
   // settings.smartCase = true;
 }
 
 function mappings() {
+  // Disable surfing keys for page
+  map("<Ctrl-i>", "<Alt-s>");
+
   // TABS
+  ////////////////////////////////////////////////////////
   alias("dd", "x", true);
   alias("gM", "<Alt-m>", true);
   alias("gp", "<Alt-p>", true);
@@ -66,7 +75,6 @@ function mappings() {
     RUNTIME("reloadTab", { nocache: true })
   );
   alias("u", "X", true);
-  // alt-tab (pun)
   alias("<A-Tab>", "gt");
 
   mapp("p", "#7 Paste URL in current tab", () => {
@@ -75,8 +83,10 @@ function mappings() {
   mapp("P", "#7 Paste URL in new tab", () => {
     Clipboard.read(({ data }) => tabOpenLink(data));
   });
+  mapp("<Ctrl-p>", "#7 Unpin tab", () => RUNTIME("togglePinTab"));
 
   // SCROLLING
+  ////////////////////////////////////////////////////////
   mapp("<Ctrl-y>", "#2 pageUp", () => Normal.scroll("pageUp"), {
     repeatIgnore: true,
   });
@@ -97,6 +107,7 @@ function mappings() {
   });
 
   // HISTORY
+  ////////////////////////////////////////////////////////
   alias("H", "S", true);
   alias("L", "D", true);
 
@@ -121,6 +132,7 @@ function mappings() {
   );
 
   // INPUT
+  ////////////////////////////////////////////////////////
   mapp("a", "#1 Append to edit box", () => {
     Hints.create(
       "input:visible, textarea:visible, *[contenteditable=true], select:visible",
