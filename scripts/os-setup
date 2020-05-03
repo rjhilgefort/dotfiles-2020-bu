@@ -70,6 +70,8 @@ sudo apt install jq # json parse, I think
 sudo apt install arandr # monitor management 
 sudo apt install libnotify-bin # send notifications
 sudo apt install woeusb # ISO bootable drive maker
+sudo apt install arandr # Helps with xrandr
+sudo apt install autorandr # Helps with xrandr
 
 ###################################################################
 ### Dotfiles / RCM ################################################

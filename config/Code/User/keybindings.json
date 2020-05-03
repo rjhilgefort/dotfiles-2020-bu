@@ -42,13 +42,21 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "ctrl+{",
+    "key": "ctrl+shift+[",
     "command": "workbench.action.previousEditor"
   },
   {
-    "key": "ctrl+}",
+    "key": "ctrl+shift+]",
     "command": "workbench.action.nextEditor"
   },
+  // {
+  //   "key": "ctrl+{",
+  //   "command": "workbench.action.previousEditor"
+  // },
+  // {
+  //   "key": "ctrl+}",
+  //   "command": "workbench.action.nextEditor"
+  // },
   // Pane Navigation
   {
     "key": "ctrl+h",
@@ -128,5 +136,15 @@
     "key": "ctrl+b",
     "command": "-extension.vim_ctrl+b",
     "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+shift+[",
+    "command": "-editor.fold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+shift+[",
+    "command": "-editor.fold",
+    "when": "editorTextFocus && foldingEnabled"
   }
 ]
