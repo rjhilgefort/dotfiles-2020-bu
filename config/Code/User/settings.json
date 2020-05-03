@@ -302,7 +302,8 @@
       "after": [],
       "commands": [
         {
-          "command": "workbench.action.files.openFile",
+          // "command": "workbench.action.files.openFile", // NOTE: Default
+          "command": "extension.codeFileNav",
           "args": []
         }
       ]
@@ -740,6 +741,88 @@
       ]
     },
     {
+      "before": ["<leader>", "w", "h"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.splitEditorLeft",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "w", "j"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.splitEditorDown",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "w", "k"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.splitEditorUp",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "w", "l"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.splitEditorRight",
+          "args": []
+        }
+      ]
+    },
+    // NOTE: Overridden by `workbench.action.splitEditorLeft`, `workbench.action.splitEditorRight`,
+    //       `workbench.action.splitEditorUp`, `workbench.action.splitEditorDown`
+    // {
+    //   "before": ["<leader>", "w", "h"],
+    //   "after": [],
+    //   "commands": [
+    //     {
+    //       "command": "workbench.action.focusPreviousGroup",
+    //       "args": []
+    //     }
+    //   ]
+    // },
+    // {
+    //   "before": ["<leader>", "w", "j"],
+    //   "after": [],
+    //   "commands": [
+    //     {
+    //       "command": "workbench.action.focusBelowGroup",
+    //       "args": []
+    //     }
+    //   ]
+    // },
+    // {
+    //   "before": ["<leader>", "w", "k"],
+    //   "after": [],
+    //   "commands": [
+    //     {
+    //       "command": "workbench.action.focusAboveGroup",
+    //       "args": []
+    //     }
+    //   ]
+    // },
+    // {
+    //   "before": ["<leader>", "w", "l"],
+    //   "after": [],
+    //   "commands": [
+    //     {
+    //       "command": "workbench.action.focusNextGroup",
+    //       "args": []
+    //     }
+    //   ]
+    // },
+    {
       "before": ["<leader>", "w", "d"],
       "after": [],
       "commands": [
@@ -750,51 +833,11 @@
       ]
     },
     {
-      "before": ["<leader>", "w", "h"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.focusPreviousGroup",
-          "args": []
-        }
-      ]
-    },
-    {
       "before": ["<leader>", "w", "H"],
       "after": [],
       "commands": [
         {
           "command": "workbench.action.moveActiveEditorGroupLeft",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": ["<leader>", "w", "j"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.focusBelowGroup",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": ["<leader>", "w", "k"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.focusAboveGroup",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": ["<leader>", "w", "l"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.focusNextGroup",
           "args": []
         }
       ]
@@ -896,6 +939,16 @@
       "after": ["<Esc>"]
     }
   ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["U"],
+      "commands": ["redo"]
+    }
+  ],
   "vim.easymotion": true,
   "vim.surround": true,
   "vim.useSystemClipboard": true,
@@ -923,7 +976,7 @@
   "explorer.confirmDragAndDrop": false,
   "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
   "workbench.iconTheme": "eq-material-theme-icons-palenight",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

@@ -80,12 +80,14 @@
     "command": "workbench.action.terminal.toggleTerminal"
   },
   // Vim Redo
-  {
-    "key": "shift+u",
-    "command": "redo",
-    "when": "textInputFocus && vim.mode != 'Insert'"
-  },
+  // https://github.com/VSCodeVim/Vim/issues/2574#issuecomment-462068666
+  // {
+  //   "key": "shift+u",
+  //   "command": "extension.vim_ctrl+r",
+  //   "when": "textInputFocus && vim.mode != 'Insert'"
+  // },
   // Multiple Cursors
+  // TODO: Doesn't work
   {
     "key": "ctrl+n",
     "command": "extension.vim_ctrl+d",

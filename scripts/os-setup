@@ -67,11 +67,12 @@ sudo apt install zeal
 sudo apt install mpd
 sudo apt install sonata # ??
 sudo apt install jq # json parse, I think
-sudo apt install arandr # monitor management 
 sudo apt install libnotify-bin # send notifications
 sudo apt install woeusb # ISO bootable drive maker
-sudo apt install arandr # Helps with xrandr
-sudo apt install autorandr # Helps with xrandr
+sudo apt install arandr # monitor management 
+sudo apt install autorandr # helps with xrandr/arandr
+sudo apt install screenkey # Shows keypresses on screen 
+
 
 ###################################################################
 ### Dotfiles / RCM ################################################
@@ -141,6 +142,15 @@ sudo apt install ./zoom_amd64.deb
 cd ~/install
 wget https://github.com/oguzhaninan/Stacer/releases/download/v1.1.0/stacer_1.1.0_amd64.deb
 sudo apt install ./stacer_1.1.0_amd64.deb
+
+### Notion / Lotion ########################################################
+### https://github.com/puneetsl/lotion
+cd ~/Apps
+git clone https://github.com/puneetsl/lotion.git
+cd lotion
+./install
+ln -sf /home/rjhilgefort/Apps/lotion/Lotion/Lotion notion
+ln -sf /home/rjhilgefort/Apps/lotion/Lotion/Lotion lotion
 
 ### Toggl ########################################################
 cd ~/install
