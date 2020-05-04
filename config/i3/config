@@ -253,9 +253,11 @@ exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet # blueman-manager
 exec --no-startup-id compton
 exec --no-startup-id albert
+exec --no-startup-id synology-drive
+exec --no-startup-id rescuetime
+
 # exec --no-startup-id polybar
 # exec --no-startup-id rofi
-# exec --no-startup-id rescuetime
 # exec --no-startup-id ~/.config/polybar/launch.sh &
 exec_always --no-startup-id ~/.scripts/wallpaper-randomize
 
@@ -270,53 +272,51 @@ exec --no-startup-id xautolock -time 5 -locker "~/.scripts/i3-lock"
 exec_always ~/.scripts/mouse-settings
 exec_always ~/.scripts/keyboard-settings
 
-# Workspace Assignment
+# Startup GUI Apps and Assignment & Workspace Assignment
 # Use `xprop`, click the window, then lookfor `WM_CLASS(STRING)`, take second value
 ####################################################################################
-# WS1
+### WS1
 assign [class="kitty"] $ws1
+exec kitty
 assign [class="Code"] $ws1
-# WS2
+exec code
+
+### WS2
 assign [class="Google-chrome"] $ws2
-# WS3
+exec google-chrome
+
+### WS3
 assign [class="discord"] $ws3
+exec discord
 assign [class="Slack"] $ws3
+exec slack
 assign [class="yakyak"] $ws3
-# WS4
+exec yakyak
+
+### WS4
 assign [class="todoist-nativefier-6c11dd"] $ws4
-assign [class="notion-nativefier-46aee8"] $ws4
+exec todoist
 assign [class="Toggl Desktop"] $ws4
-# WS5
+exec TogglDesktop
+assign [class="QtQmlViewer"] $ws4
+exec 1password
+# TODO: Gmail
+# TODO: Calendar
+
+### WS5
 assign [class="Spotify"] $ws5
 for_window [class="Spotify"] move to workspace $ws5
-# WS6
+exec spotify
+assign [class="Lotion"] $ws5
+exec notion
+
+### WS6
 # TODO: Code - Journal
 # TODO: Google Photos / Emoji picker
 # TODO: Terminal
-# WS7
+
+### WS7
 assign [class="Steam"] $ws7
-assign [class="Lutris"] $ws7
-
-
-# Startup GUI Apps and Assignment
-####################################################################################
-# WS1
-exec kitty
-exec code
-# WS2
-exec google-chrome
-# WS3
-exec discord
-exec slack
-exec yakyak
-# WS4
-# TODO: Gmail
-# TODO: Calendar
-exec todoist
-exec notion
-exec TogglDesktop
-# WS5
-exec spotify
-# WS7
 # exec steam
+assign [class="Lutris"] $ws7
 # exec lutris

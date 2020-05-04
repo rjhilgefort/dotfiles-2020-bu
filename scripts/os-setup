@@ -118,6 +118,21 @@ cd ~/install
 wget https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_19.10/amd64/albert_0.16.1_amd64.deb
 sudo apt install ./code_1.44.1-1586789296_amd64.deb
 
+### Synology Drive Client #########################################
+# https://www.synology.com/en-us/support/download/DS1815+#utilities
+cd ~/install
+wget https://global.download.synology.com/download/Tools/SynologyDriveClient/2.0.1-11061/Ubuntu/Installer/x86_64/synology-drive-client-11061.x86_64.deb
+sudo apt install ./synology-drive-client-11061.x86_64.deb
+
+### Synology Assistant ############################################
+cd ~/install
+wget https://global.download.synology.com/download/Tools/Assistant/6.2-24922/Ubuntu/x86_64/synology-assistant_6.2-24922_amd64.deb
+sudo apt install ./synology-assistant_6.2-24922_amd64.deb
+
+### Rescuetime ######################################################
+cd ~/install
+wget https://www.rescuetime.com/installers/rescuetime_current_amd64.deb
+sudo apt install ./rescuetime_current_amd64.deb
 
 ###################################################################
 ### Random Installs ###############################################
@@ -149,8 +164,8 @@ cd ~/Apps
 git clone https://github.com/puneetsl/lotion.git
 cd lotion
 ./install
-ln -sf /home/rjhilgefort/Apps/lotion/Lotion/Lotion notion
-ln -sf /home/rjhilgefort/Apps/lotion/Lotion/Lotion lotion
+ln -sf /home/$(whoami)/Apps/lotion/Lotion/Lotion /usr/local/bin/notion
+ln -sf /home/$(whoami)/Apps/lotion/Lotion/Lotion /usr/local/bin/lotion
 
 ### Toggl ########################################################
 cd ~/install
@@ -164,6 +179,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ### SpaceVim ######################################################
 curl -sLf https://spacevim.org/install.sh | bash
 
+
 ###################################################################
 ### Nativefier ####################################################
 ###################################################################
@@ -176,8 +192,8 @@ cd ~/Apps
 nativefier --name "todoist" "https://todoist.com/app"
 sudo ln -s /home/$(whoami)/Apps/todoist-linux-x64/todoist /usr/local/bin/todoist
 # Notion
-nativefier --name "notion" "https://www.notion.so/"
-sudo ln -s /home/$(whoami)/Apps/notion-linux-x64/notion /usr/local/bin/notion
+# nativefier --name "notion" "https://www.notion.so/"
+# sudo ln -s /home/$(whoami)/Apps/notion-linux-x64/notion /usr/local/bin/notion
 
 
 ###################################################################
@@ -214,7 +230,8 @@ sudo apt install spotify-client
 sudo snap install yakyak
 sudo snap install cheat 
 sudo snap install --edge android-messages-desktop
-# sudo snap install todoist-thibaut
+sudo snap install 1password-linux && sudo snap alias 1password-linux.1password 1password
+# sudo snap install todoist-thibaut && sudo snap alias todoist-thibaut.todoist todoist
 
 
 #########################################################################
@@ -248,8 +265,23 @@ sudo ./install.sh
 gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing false
 
 
-################################################################
+###############################################################
 # Fonts
 ################################################################
 # MacOS Fonts
 # https://securitronlinux.com/debian-testing/install-mac-osx-fonts-on-linux-easily/
+
+
+################################################################
+# Symlinks
+################################################################
+sudo ln -sf /usr/bin/nautilus /usr/local/bin/files
+sudo ln -sf /snap/bin/1password /usr/local/bin/passwords
+sudo ln -sf /usr/bin/google-chrome /usr/local/bin/browser
+sudo ln -sf /usr/bin/kitty /usr/local/bin/terminal
+sudo ln -sf /usr/local/bin/todoist /usr/local/bin/tasks
+sudo ln -sf /usr/local/bin/todoist /usr/local/bin/tasks
+sudo ln -sf /usr/ /usr/local/bin/tasks
+sudo ln -sf /usr/bin/gnome-control-center /usr/local/bin/settings
+sudo ln -sf /usr/bin/gnome-contacts /usr/local/bin/contacts
+
