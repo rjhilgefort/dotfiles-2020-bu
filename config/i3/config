@@ -246,6 +246,12 @@ bar {
   status_command i3status
 }
 
+# copyq
+for_window [class="copyq"] floating enable
+exec --no-startup-id copyq
+bindsym $mod+Control+v exec copyq toggle
+
+
 # Startup CLI Apps
 ##################################################################
 exec XDG_CURRENT_DESKTOP=GNOME
