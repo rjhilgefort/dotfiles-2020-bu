@@ -1,8 +1,0 @@
-# [settings]
-screenchange-reload = true
-width = 100%
-bottom = false
-
-# [bar/rjh]
-# bottom = false
-# width = 100%
