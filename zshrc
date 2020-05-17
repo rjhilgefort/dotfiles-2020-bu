@@ -1,5 +1,5 @@
 ### OSX antigen file
-source ~/bin/antigen.zsh
+source ~/.bin/antigen.zsh
 
 ### Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -44,3 +44,5 @@ antigen apply
 [[ -s "$HOME/.zsh_functions" ]] && source "$HOME/.zsh_functions"
 [[ -s "$HOME/.zsh_aliases" ]] && source "$HOME/.zsh_aliases"
 
+# Run a command
+neofetch
