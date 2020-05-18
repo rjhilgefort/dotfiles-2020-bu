@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+### Misc Packages
+pamac install kitty
+pamac install code
+
+### Magic Mouse
+pamac install dkms
+cd ~/bin
+git clone https://github.com/RicardoEPRodrigues/Linux-Magic-Trackpad-2-Driver.git
+cd Linux-Magic-Trackpad-2-Driver/scripts
+chmod u+x install.sh
+sudo ./install.sh
+
+# TODO: Need to `history | rg "pamac install"` and document everything I did on ArcoLinux
