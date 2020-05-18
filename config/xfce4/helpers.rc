@@ -1,4 +1,1 @@
-FileManager=Thunar
-TerminalEmulator=custom-TerminalEmulator
-WebBrowser=firefox
-MailReader=evolution
+/home/rob/.dotfiles/config/xfce4/helpers.rc

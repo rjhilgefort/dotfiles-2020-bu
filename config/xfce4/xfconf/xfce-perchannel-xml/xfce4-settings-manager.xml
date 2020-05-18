@@ -1,8 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<channel name="xfce4-settings-manager" version="1.0">
-  <property name="last" type="empty">
-    <property name="window-width" type="int" value="459"/>
-    <property name="window-height" type="int" value="501"/>
-  </property>
-</channel>
+/home/rob/.dotfiles/config/xfce4/xfconf/xfce-perchannel-xml/xfce4-settings-manager.xml

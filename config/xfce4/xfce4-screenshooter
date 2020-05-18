@@ -1,7 +1,1 @@
-delay=1
-region=1
-action=1
-show_mouse=0
-title=ArcoLinux
-timestamp=TRUE
-app=nomacs
+/home/rob/.dotfiles/config/xfce4/xfce4-screenshooter
